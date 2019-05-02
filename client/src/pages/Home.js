@@ -3,7 +3,6 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import Carousel from "../components/Carousel";
 import Button from "../components/Button";
-import SomeComponent from "../components/Account";
 
 export default class Home extends React.Component {
   render() {
