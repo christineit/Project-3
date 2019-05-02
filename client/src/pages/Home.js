@@ -2,6 +2,8 @@ import React from "react";
 // import Container from "../components/Container";
 import { Container, Row, Col } from "reactstrap";
 import Carousel from "../components/Carousel";
+import Card from "../components/Card";
+import Button from "../components/Button";
 
 export default class Home extends React.Component {
   render() {
@@ -13,6 +15,7 @@ export default class Home extends React.Component {
             <Carousel />
           </Col>
         </Row>
+        <Card />
       </Container>
     );
   }
