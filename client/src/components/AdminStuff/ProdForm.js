@@ -1,7 +1,10 @@
 import React from "react"
 import { Jumbotron, Container } from 'reactstrap';
-import CreateProductForm from './CreateProductForm'
+import CreateProductForm from './CreateProductForm';
+import API from "../../utils/API";
+
 export default class ProductCreate extends React.Component {
+
 
     state = {
         productname: "",
@@ -13,7 +16,7 @@ export default class ProductCreate extends React.Component {
         images: "",
         keywords: ""
 
-    }
+    };
 
     handleInputChange = e => {
         let value = e.target.value;
@@ -24,9 +27,26 @@ export default class ProductCreate extends React.Component {
         })
     }
 
+   
     handleFormSubmit = e => {
         e.preventDefault();
-        console.log(this.state)
+        let formData = {
+            productname: this.state.productname,
+            category: this.state.category,
+            size: this.state.size,
+            quantity: this.state.quantity,
+            description: this.state.description,
+            price: this.state.price,
+            images: this.state.images,
+            keywords:this.state.keywords
+         }   
+         console.log("line 41 prodform.js" , formData);
+         
+        API
+        .saveProduct(formData)
+        .then(res => console.log("Book Saved, line 45 prodform.js"))
+        .catch(err => console.log(err));
+         console.log(this.state)
     }
 
     render() {
