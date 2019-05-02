@@ -2,6 +2,7 @@ import React from "react";
 // import Container from "../components/Container";
 import { Container, Row, Col } from "reactstrap";
 import Carousel from "../components/Carousel";
+import Card from "../components/Card";
 import Button from "../components/Button";
 import SomeComponent from "../components/Account";
 
@@ -13,10 +14,9 @@ export default class Home extends React.Component {
           <Col sm="12" md={{ size: 6, offset: 3 }}>
             <h1>Home Page</h1>
             <Carousel />
-
-            <Button />
           </Col>
         </Row>
+        <Card />
       </Container>
     );
   }
