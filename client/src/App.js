@@ -1,13 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-// import Books from "./pages/Books";
-// import Detail from "./pages/Detail";
-// import NoMatch from "./pages/NoMatch";
 import NavBar from "./components/Navbar";
 import Cart from "./pages/Cart";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import Admin from "./pages/Admin";
+
 function App() {
   return (
     <Router>
@@ -19,8 +17,8 @@ function App() {
           <Route exact path="/products" component={Products} />
           <Route exact path="/admin" component={Admin} />
           {/* <Route exact path="/books" component={Books} />
-          <Route exact path="/books/:id" component={Detail} />
-          <Route component={NoMatch} /> */}
+            <Route exact path="/books/:id" component={Detail} />
+            <Route component={NoMatch} /> */}
         </Switch>
       </div>
     </Router>
