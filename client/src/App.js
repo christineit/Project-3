@@ -1,10 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavBar from "./components/Navbar";
-import Cart from "./pages/Cart";
+import Cartpage from "./pages/Cartpage";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import Admin from "./pages/Admin";
+import Cart from "./components/shopify/Cart";
 
 function App() {
   return (
