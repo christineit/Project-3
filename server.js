@@ -1,9 +1,11 @@
 const express = require("express");
-
+// require("dotenv").config();
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+// var keys = require("./client/src/keys");
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -16,6 +18,8 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
+
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/productlist");
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/productlist"
 );
@@ -27,6 +31,7 @@ mongoose.connect(
 //     }).catch(function(err){
 //       console.log(err.message);
 //     });
+
 
 // Start the API server
 app.listen(PORT, function() {
