@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import {
   Collapse,
@@ -12,8 +12,8 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem
-} from 'reactstrap';
-import { NavLink as RRNavLink } from 'react-router-dom';
+} from "reactstrap";
+import { NavLink as RRNavLink } from "react-router-dom";
 // import { NavLink } from 'reactstrap';
 
 export default class NavBar extends React.Component {
@@ -39,16 +39,39 @@ export default class NavBar extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink tag={RRNavLink} exact to="/" activeClassName="active">Home</NavLink>
+                <NavLink tag={RRNavLink} exact to="/" activeClassName="active">
+                  Home
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={RRNavLink} exact to="/cart" activeClassName="active">Cart</NavLink>
+                <NavLink
+                  tag={RRNavLink}
+                  exact
+                  to="/cart"
+                  activeClassName="active"
+                >
+                  Cart
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={RRNavLink} exact to="/products" activeClassName="active">Products</NavLink>
+                <NavLink
+                  tag={RRNavLink}
+                  exact
+                  to="/products"
+                  activeClassName="active"
+                >
+                  Products
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={RRNavLink} exact to="/admin" activeClassName="active">Admin</NavLink>
+                <NavLink
+                  tag={RRNavLink}
+                  exact
+                  to="/admin"
+                  activeClassName="active"
+                >
+                  Admin
+                </NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
@@ -56,10 +79,14 @@ export default class NavBar extends React.Component {
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    <NavLink href="https://github.com/christineit/Project-3">GitHub</NavLink>
+                    <NavLink href="https://github.com/christineit/Project-3">
+                      GitHub
+                    </NavLink>
                   </DropdownItem>
                   <DropdownItem>
-                    <NavLink href="https://www.linkedin.com/in/scott-wittenberg-6475b052/">Scott</NavLink>
+                    <NavLink href="https://www.linkedin.com/in/scott-wittenberg-6475b052/">
+                      Scott
+                    </NavLink>
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
