@@ -108,11 +108,11 @@ class App extends Component {
             <h2>{this.state.shop.description}</h2>
           </div>
         </header>
-        <Products
+        {/* <Products
           products={this.state.products}
           client={this.props.client}
           addVariantToCart={this.addVariantToCart}
-        />
+        /> */}
         <Cart
           checkout={this.state.checkout}
           isCartOpen={this.state.isCartOpen}
