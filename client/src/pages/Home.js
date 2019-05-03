@@ -5,7 +5,7 @@ import Popup from "../components/Popup"
 import Carousel from "../components/Carousel";
 import Card from "../components/Card";
 import Button from "../components/Button";
-import Carousel from "../components/Carousel";
+// import Carousel from "../components/Carousel";
 
 export default class Home extends React.Component {
   render() {
