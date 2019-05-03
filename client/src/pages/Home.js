@@ -3,7 +3,7 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import Carousel from "../components/Carousel";
 import Card from "../components/Card";
-import Button from "../components/Button";
+// import Button from "../components/Button";
 
 export default class Home extends React.Component {
   render() {
@@ -12,10 +12,10 @@ export default class Home extends React.Component {
         <Row>
           <Col sm="12" md={{ size: 6, offset: 3 }}>
             <h1>Home Page</h1>
-            <Carousel />
+            <Carousel style={{ padding: "50px" }} />
+            <Card />
           </Col>
         </Row>
-        <Card />
       </Container>
     );
   }
