@@ -14,9 +14,21 @@ export default class ProductCreate extends React.Component {
         description: "",
         price: 0,
         images: "",
-        keywords: ""
+        keywords: "",
+        isSelling: false
 
     };
+    // componentDidMount() {
+    //     this.loadProduct(id);
+    //   }
+    //   loadProduct= id => {
+    //     API.getProduct(id)
+    //       .then(res =>
+    //         this.setState({ productData: res.data}, {isSelling:true},
+    //             console.log(res.data))
+    //       )
+    //       .catch(err => console.log(err));
+    //   }
 
     handleInputChange = e => {
         let value = e.target.value;

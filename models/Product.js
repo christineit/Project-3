@@ -40,7 +40,12 @@ const productSchema = new Schema({
   keywords:{
     type: Array,
     required: false 
+  },
+  isSelling: {
+    type: Boolean,
+    default: false
   }
+
 });
 
 const Product = mongoose.model("Product", productSchema);
