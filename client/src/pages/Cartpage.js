@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Button, Modal, ModalBody, ModalFooter, Alert } from "reactstrap";
 import { Link, Redirect } from "react-router-dom";
-import Cart from "../Cart";
+import Cart from "../components/shopify/Cart";
 
 class CartPage extends Component {
   constructor(props) {
@@ -22,7 +22,7 @@ class CartPage extends Component {
     if (cart.length > 0) {
       this.toggle();
     } else {
-      <Redirect to="/" />;
+      // <Redirect to="/" />;
     }
   }
 
