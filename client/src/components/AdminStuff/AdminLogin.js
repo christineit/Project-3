@@ -1,11 +1,11 @@
 import React from "react";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
-import AdminLogin from "./AdminLogin";
 
-export default class AdminForm extends React.Component {
+export default class AdminLogin extends React.Component {
   state = {
     email: "",
-    password: ""
+    password: "",
+    authenticated: false
   };
 
   handleTyping = event => {
@@ -14,10 +14,11 @@ export default class AdminForm extends React.Component {
   };
 
   onSubmit = event => {
-    const { username, email, passwordOne } = this.state;
+    const { email, passwordOne } = this.state;
 
     this.props.firebase
-      .doCreateUserWithEmailAndPassword(this.state.email, this.state.password)
+      .doSignInWithEmailAndPassword(this.state.email, this.state.password)
+      // this.auth.signInWithEmailAndPassword(this.state.email, this.state.password);
       .then(authUser => {
         console.log("this is our user we just created!!!", authUser);
         // this.setState({ ...INITIAL_STATE });
@@ -39,7 +40,7 @@ export default class AdminForm extends React.Component {
             <Input
               type="email"
               name="email"
-              id="newEmail"
+              id="Email"
               placeholder="Hello Admin"
               onChange={this.handleTyping}
             />
@@ -49,15 +50,14 @@ export default class AdminForm extends React.Component {
             <Input
               type="password"
               name="password"
-              id="newPassword"
+              id="Password"
               placeholder="Password"
               onChange={this.handleTyping}
             />
           </FormGroup>
           {/* <Button>Submit</Button> */}
         </Form>
-        <button onClick={this.onSubmit}>Create!</button>
-        <AdminLogin />
+        <button onClick={this.onSubmit}>Login!</button>
       </div>
     );
   }
