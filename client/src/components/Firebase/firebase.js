@@ -1,5 +1,7 @@
 import app from "firebase/app";
 import "firebase/auth";
+// var keys = require("../../keys");
+// const dotenv = require("dotenv").config();
 
 const config = {
   apiKey: "AIzaSyA021NLOC0l3fMaFm1tdLtLTwMXogPCOJM",
