@@ -5,6 +5,7 @@ import Cart from "./pages/Cart";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import Admin from "./pages/Admin";
+import Cart from "./components/shopify/Cart";
 
 function App() {
   return (
