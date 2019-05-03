@@ -5,18 +5,18 @@ const productSchema = new Schema({
   
   productname: { 
     type: String,
-     required: false 
+     required: true 
     },
   category: { 
     type: String,
     required: false 
   },
   size: { 
-    type: String,
+    type: Array,
     required: false 
   },
   quantity: {
-    type: String,
+    type: Number,
     required: false 
   },
   description: { 
@@ -24,21 +24,21 @@ const productSchema = new Schema({
     required: false 
   },
 
-  // Date: { 
-  //   type:Date, 
-  //   default: Date.now 
-  // },
+  Date: { 
+    type:Date, 
+    default: Date.now 
+  },
 
   price: {
-    type:String, 
+    type: Number, 
     required: false 
   },
   images:{
-    type: String,
+    type: Array,
     required: false 
   },
   keywords:{
-    type: String,
+    type: Array,
     required: false 
   }
 });
