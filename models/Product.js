@@ -53,7 +53,6 @@ const productSchema = new Schema({
     type: Array,
     required: false 
   }
->>>>>>> master
 });
 
 const Product = mongoose.model("Product", productSchema);
