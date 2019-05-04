@@ -7,11 +7,11 @@ function CreateProductForm(props) {
         <Form>
             <FormGroup>
                 <Label for="productName">Product Name</Label>
-                <Input name="productname" id="productname" placeholder="Display name of product" onChange={props.handleInputChange} />
+                <Input type="text" name="productname" id="productname" placeholder="Display name of product" onChange={props.handleInputChange} />
             </FormGroup>
             <FormGroup>
                 <Label for="category">Category</Label>
-                <Input name="category" id="category" placeholder="ex. clothing, decoration, food" onChange={props.handleInputChange} />
+                <Input type="text" name="category" id="category" placeholder="ex. clothing, decoration, food" onChange={props.handleInputChange} />
             </FormGroup>
             <FormGroup>
                 <Label for="price">Price</Label>
@@ -19,7 +19,7 @@ function CreateProductForm(props) {
             </FormGroup>
             <FormGroup>
                 <Label for="quantity">Quantity</Label>
-                <Input name="quantity" id="quantity" placeholder="" onChange={props.handleInputChange} />
+                <Input type="number" name="quantity" id="quantity" placeholder="How many items" onChange={props.handleInputChange} />
             </FormGroup>
             <FormGroup>
                 <Label for="size">Size</Label>

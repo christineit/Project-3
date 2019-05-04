@@ -4,7 +4,12 @@ import { Container, Row, Col } from "reactstrap";
 import Popup from "../components/Popup";
 import Carousel from "../components/Carousel";
 import Card from "../components/Card";
+<<<<<<< HEAD
+import Button from "../components/Button";
+// import Carousel from "../components/Carousel";
+=======
 
+>>>>>>> master
 
 export default class Home extends React.Component {
   render() {
