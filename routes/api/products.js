@@ -10,4 +10,4 @@ router.route("/")
 router.route("/selling")
     .get(productsController.getSellingProduct)
 
-module.exports = router;
+module.exports = router;    
