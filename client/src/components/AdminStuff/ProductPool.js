@@ -13,6 +13,9 @@ export default class ProductPool extends React.Component {
                 this.setState({ productlist: res.data })
             })
     }
+        
+    
+ 
 
     render() {
         return (

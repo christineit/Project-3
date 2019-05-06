@@ -13,7 +13,9 @@ const Description = props => {
     <div>
       <Card>
         <CardBody>
-          <CardTitle>Product Description</CardTitle>
+          <CardTitle> 
+                    </CardTitle>
+         
           <CardSubtitle>Something clever</CardSubtitle>
           <CardText>This is pretty awesome</CardText>
           <Button>Add to Cart</Button>

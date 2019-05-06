@@ -35,7 +35,7 @@ export default class ProductCreate extends React.Component {
         let yeet = e.target.name;
         let re = /^[0-9\b]+$/;
 
-        if (e.target.type === "number" && !isNaNs(value)) {
+        if (e.target.type === "number" && !re(value)) {
 
             this.setState({
                 [yeet]: value
