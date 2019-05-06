@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Products from "../components/shopify/Products";
-import Cart from "../components/shopify/Cart";
+import Products from "./components/shopify/Products";
+import Cart from "./components/shopify/Cart";
 
-class App extends Component {
+class Shop extends Component {
   constructor() {
     super();
 
@@ -108,11 +108,11 @@ class App extends Component {
             <h2>{this.state.shop.description}</h2>
           </div>
         </header>
-        {/* <Products
+        <Products
           products={this.state.products}
           client={this.props.client}
           addVariantToCart={this.addVariantToCart}
-        /> */}
+        />
         <Cart
           checkout={this.state.checkout}
           isCartOpen={this.state.isCartOpen}
@@ -125,4 +125,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Shop;
