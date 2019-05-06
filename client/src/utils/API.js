@@ -9,6 +9,6 @@ export default {
   },
   getAllProducts: function (productData) {
     return axios.get("/api/products", productData)
-  },
-
+  }
+ 
 };

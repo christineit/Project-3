@@ -5,6 +5,7 @@ export default class ProductPool extends React.Component {
     state = {
         productlist: []
     }
+    
 
     componentDidMount = () => {
         API.
@@ -14,9 +15,6 @@ export default class ProductPool extends React.Component {
             })
     }
         
-    
- 
-
     render() {
         return (
             <div>
