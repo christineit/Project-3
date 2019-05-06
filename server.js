@@ -31,6 +31,6 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/productlist");
 //     });
 
 // Start the API server
-app.listen(process.env.PORT || 5000, function() {
+app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
