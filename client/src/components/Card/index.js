@@ -1,4 +1,6 @@
 import React from "react";
+import "./style.css";
+
 import {
   Card,
   CardText,
@@ -12,7 +14,7 @@ const Description = props => {
   return (
     <div>
       <Card>
-        <CardBody>
+        <CardBody className="text-center">
           <CardTitle>Product Description</CardTitle>
           <CardSubtitle>Something clever</CardSubtitle>
           <CardText>This is pretty awesome</CardText>
