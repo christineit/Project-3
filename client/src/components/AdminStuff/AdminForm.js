@@ -35,7 +35,8 @@ export default class AdminForm extends React.Component {
       <div>
         <Form>
           <FormGroup>
-            <Label for="username">Email</Label>
+            <h3 className="text-center">CREATE AN ADMIN</h3>
+            <Label for="username">Email:</Label>
             <Input
               type="email"
               name="email"
@@ -45,7 +46,7 @@ export default class AdminForm extends React.Component {
             />
           </FormGroup>
           <FormGroup>
-            <Label for="examplePassword">Password</Label>
+            <Label for="examplePassword">Password:</Label>
             <Input
               type="password"
               name="password"
