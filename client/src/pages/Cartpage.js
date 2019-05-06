@@ -1,109 +1,128 @@
 import React, { Component } from "react";
-import { Button, Modal, ModalBody, ModalFooter, Alert } from "reactstrap";
-import { Link, Redirect } from "react-router-dom";
+import Products from "../components/shopify/Products";
 import Cart from "../components/shopify/Cart";
 
-class CartPage extends Component {
-  constructor(props) {
-    super(props);
+class App extends Component {
+  constructor() {
+    super();
+
     this.state = {
-      modal: true,
-      backdrop: false
+      isCartOpen: false,
+      checkout: { lineItems: [] },
+      products: [],
+      shop: {}
     };
 
-    this.toggle = this.toggle.bind(this);
-    this.CalculateTotalAmount = this.CalculateTotalAmount.bind(this);
-    this.CheckOutMessage = this.CheckOutMessage.bind(this);
-    this.isCheckout = false;
-  }
-  CheckOutMessage() {
-    var cart = this.props.cart;
-
-    if (cart.length > 0) {
-      this.toggle();
-    } else {
-      // <Redirect to="/" />;
-    }
+    this.handleCartClose = this.handleCartClose.bind(this);
+    this.addVariantToCart = this.addVariantToCart.bind(this);
+    this.updateQuantityInCart = this.updateQuantityInCart.bind(this);
+    this.removeLineItemInCart = this.removeLineItemInCart.bind(this);
   }
 
-  toggle() {
-    this.setState({
-      modal: !this.state.modal
+  componentWillMount() {
+    this.props.client.checkout.create().then(res => {
+      this.setState({
+        checkout: res
+      });
+    });
+
+    this.props.client.product.fetchAll().then(res => {
+      this.setState({
+        products: res
+      });
+    });
+
+    this.props.client.shop.fetchInfo().then(res => {
+      this.setState({
+        shop: res
+      });
     });
   }
 
-  CalculateTotalAmount(cart) {
-    var amount = 0;
-    for (var item of cart) {
-      amount += item.units * item.price;
-    }
-    return amount.toFixed(2);
+  addVariantToCart(variantId, quantity) {
+    this.setState({
+      isCartOpen: true
+    });
+
+    const lineItemsToAdd = [{ variantId, quantity: parseInt(quantity, 10) }];
+    const checkoutId = this.state.checkout.id;
+
+    return this.props.client.checkout
+      .addLineItems(checkoutId, lineItemsToAdd)
+      .then(res => {
+        this.setState({
+          checkout: res
+        });
+      });
+  }
+
+  updateQuantityInCart(lineItemId, quantity) {
+    const checkoutId = this.state.checkout.id;
+    const lineItemsToUpdate = [
+      { id: lineItemId, quantity: parseInt(quantity, 10) }
+    ];
+
+    return this.props.client.checkout
+      .updateLineItems(checkoutId, lineItemsToUpdate)
+      .then(res => {
+        this.setState({
+          checkout: res
+        });
+      });
+  }
+
+  removeLineItemInCart(lineItemId) {
+    const checkoutId = this.state.checkout.id;
+
+    return this.props.client.checkout
+      .removeLineItems(checkoutId, [lineItemId])
+      .then(res => {
+        this.setState({
+          checkout: res
+        });
+      });
+  }
+
+  handleCartClose() {
+    this.setState({
+      isCartOpen: false
+    });
   }
 
   render() {
-    const cart = this.props.cart;
     return (
-      <div>
-        <Modal
-          isOpen={this.state.modal}
-          toggle={this.toggle}
-          className={this.props.className}
-          backdrop={this.state.backdrop}
-          size="lg"
-        >
-          <ModalBody>
-            <h1>Cart</h1>
-            <Cart
-              cart={cart}
-              removeFromCart={this.props.removeFromCart.bind(this)}
-            />
-          </ModalBody>
-          <h5>
-            <span className="label label-default">
-              Total Amount: {this.CalculateTotalAmount(cart)}
-            </span>
-          </h5>
-          <ModalFooter>
-            <Button color="success" onClick={this.CheckOutMessage}>
-              CheckOut
-            </Button>{" "}
-            <Link to="/">
-              <Button color="secondary">Close</Button>
-            </Link>
-          </ModalFooter>
-        </Modal>
-
-        <Modal
-          isOpen={!this.state.modal}
-          toggle={this.toggle}
-          className={this.props.className}
-          backdrop={this.state.backdrop}
-          size="lg"
-        >
-          <ModalBody>
-            <Alert color="success">
-              <h4 className="alert-heading">Thanks for Shopping</h4>
-              <p>
-                Aww yeah, you successfully read this important alert message.
-                This example text is going to run a bit longer so that you can
-                see how spacing within an alert works with this kind of content.
-              </p>
-              <hr />
-              <p className="mb-0">
-                Whenever you need to, be sure to use margin utilities to keep
-                things nice and tidy.
-              </p>
-            </Alert>
-          </ModalBody>
-          <ModalFooter>
-            <Button className="info" href="http://localhost:3000/">
-              Close
-            </Button>
-          </ModalFooter>
-        </Modal>
+      <div className="App">
+        <header className="App__header">
+          {!this.state.isCartOpen && (
+            <div className="App__view-cart-wrapper">
+              <button
+                className="App__view-cart"
+                onClick={() => this.setState({ isCartOpen: true })}
+              >
+                Cart
+              </button>
+            </div>
+          )}
+          <div className="App__title">
+            <h1>{this.state.shop.name}: React Example</h1>
+            <h2>{this.state.shop.description}</h2>
+          </div>
+        </header>
+        <Products
+          products={this.state.products}
+          client={this.props.client}
+          addVariantToCart={this.addVariantToCart}
+        />
+        <Cart
+          checkout={this.state.checkout}
+          isCartOpen={this.state.isCartOpen}
+          handleCartClose={this.handleCartClose}
+          updateQuantityInCart={this.updateQuantityInCart}
+          removeLineItemInCart={this.removeLineItemInCart}
+        />
       </div>
     );
   }
 }
 
-export default CartPage;
+export default App;
