@@ -3,21 +3,10 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import Popup from "../components/Popup";
 import Card from "../components/Card";
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Carousel from "../components/Carousel";
-=======
-<<<<<<< HEAD
-import Button from "../components/Button";
 // import Carousel from "../components/Carousel";
-=======
-
->>>>>>> master
->>>>>>> 716c1b8d9dbcb735c1c77216e8679bd3e4704413
-=======
 import Button from "../components/Button";
 import "./Home.css";
->>>>>>> c40199b53551bb298234e5602692531ee968681e
 
 export default class Home extends React.Component {
   render() {
