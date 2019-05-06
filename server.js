@@ -42,17 +42,29 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
+//Define local MongoDB URI
+var databaseURL = "mongodb://localhost/productlist";
+//---------------------------------------------------
+if (process.env.MONGO_URI) {
+  //this executes if this is being executed in heroku app:
+  mongoose.connect(process.env.MONGODB_URI);
+} else {
+  //this executes if this is being executed on your local machine
+  mongoose.connect(databaseURL);
+}
+//------------------end database config-----------------
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/productlist");
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/productlist");
-// var db =require("./models");
-//     db.Product.create(
-//       {productname: "product a"},{category: "test"}, {size:"xs"}, {quantity:"3"}, {description: "thejr"}, {price:"3"}, {images:"gea"}, {keywords:"asd"}
-//     ).then(function(a){
-//       console.log(a)
-//     }).catch(function(err){
-//       console.log(err.message);
-//     });
+var db = mongoose.connection;
+
+//show any mongoose errors
+db.on("error", function(err) {
+  console.log("Mongoose Error: ", err);
+});
+
+//once logged into the db through mongoose, log a success message
+db.once("open", function() {
+  console.log("Mongoose connection successful.");
+});
 
 // Start the API server
 app.listen(PORT, function() {
