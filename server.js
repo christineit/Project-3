@@ -20,21 +20,17 @@ app.use(routes);
 // Connect to the Mongo DB
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/productlist");
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/productlist"
-);
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/productlist");
 // var db =require("./models");
 //     db.Product.create(
-//       {productname: "product a"},{category: "test"}, {size:"xs"}, {quantity:"3"}, {description: "thejr"}, {price:"3"}, {images:"gea"}, {keywords:"asd"} 
+//       {productname: "product a"},{category: "test"}, {size:"xs"}, {quantity:"3"}, {description: "thejr"}, {price:"3"}, {images:"gea"}, {keywords:"asd"}
 //     ).then(function(a){
 //       console.log(a)
 //     }).catch(function(err){
 //       console.log(err.message);
 //     });
 
-
 // Start the API server
 app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
-// comment
