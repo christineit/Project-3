@@ -21,7 +21,6 @@ export default class Admin extends React.Component {
             }}
           </FirebaseContext.Consumer>
           <ProdForm />
-          <ProdForm />
           <ProductPool />
         </div>
       </Container>
