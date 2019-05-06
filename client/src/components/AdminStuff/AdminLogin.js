@@ -20,7 +20,7 @@ export default class AdminLogin extends React.Component {
       .doSignInWithEmailAndPassword(this.state.email, this.state.password)
       // this.auth.signInWithEmailAndPassword(this.state.email, this.state.password);
       .then(authUser => {
-        console.log("this is our user we just created!!!", authUser);
+        console.log("We are logged in!", authUser);
         // this.setState({ ...INITIAL_STATE });
       })
       .catch(error => {
@@ -34,9 +34,10 @@ export default class AdminLogin extends React.Component {
     console.log("this is my state", this.state);
     return (
       <div>
-        <Form>
+        <Form className="">
           <FormGroup>
-            <Label for="username">Email</Label>
+            <h3 className="text-center">ADMIN LOGIN</h3>
+            <Label for="username">Email:</Label>
             <Input
               type="email"
               name="email"
@@ -46,7 +47,7 @@ export default class AdminLogin extends React.Component {
             />
           </FormGroup>
           <FormGroup>
-            <Label for="examplePassword">Password</Label>
+            <Label for="examplePassword">Password:</Label>
             <Input
               type="password"
               name="password"
