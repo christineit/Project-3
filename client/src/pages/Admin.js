@@ -3,6 +3,7 @@ import AdminForm from "../components/AdminStuff/AdminForm";
 import ProdForm from "../components/AdminStuff/ProdForm";
 import SomeComponent from "../components/Account";
 import ProductPool from "../components/AdminStuff/ProductPool";
+import AdminLogin from "../components/AdminStuff/AdminLogin";
 import { FirebaseContext } from "../components/Firebase";
 import { Container, Row, Col } from "reactstrap";
 
@@ -11,13 +12,15 @@ export default class Admin extends React.Component {
     return (
       <Container>
         <div>
-          Create an Admin!
-          {/* <SomeComponent /> */}
           <FirebaseContext.Consumer>
             {firebase => {
-              return <AdminForm firebase={firebase} />;
+              return (
+                <AdminForm firebase={firebase} />,
+                <AdminLogin firebase={firebase} />
+              );
             }}
           </FirebaseContext.Consumer>
+          <ProdForm />
           <ProdForm />
           <ProductPool />
         </div>
