@@ -7,4 +7,7 @@ router.route("/")
     .post(productsController.create)
     .get(productsController.getAll)
 
+router.route("/selling")
+    .get(productsController.getSellingProduct)
+
 module.exports = router;
