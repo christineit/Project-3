@@ -21,10 +21,28 @@ export default class ProductCreate extends React.Component {
     handleInputChange = e => {
         let value = e.target.value;
         let yeet = e.target.name;
+        let re = /^[0-9\b]+$/;
 
-        this.setState({
-            [yeet]: value
-        })
+        if (e.target.type === "number" && !isNaN(value)) {
+
+            this.setState({
+                [yeet]: value
+            })
+        }
+
+        if (e.target.type === "text" && !isNaN(value)) {
+            console.log("okee")
+
+        }
+        else {
+            console.log("inputs a letter")
+            this.setState({
+                [yeet]: value
+            })
+        }
+        // if(yeet ==="price" && re)
+
+
     }
 
    
