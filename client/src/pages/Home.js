@@ -6,7 +6,7 @@ import Carousel from "../components/Carousel";
 import Card from "../components/Card";
 import Button from "../components/Button";
 import "./Home.css";
-import ProductYeet from "../components/ProductDisplay/ProductYeet"
+// import ProductYeet from "../components/ProductDisplay/ProductYeet"
 
 export default class Home extends React.Component {
   render() {
@@ -19,7 +19,7 @@ export default class Home extends React.Component {
             <Card />
           </Col>
         </Row>
-        <ProductYeet />
+        {/* <ProductYeet /> */}
       </Container>
     );
   }
