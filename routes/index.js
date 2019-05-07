@@ -12,7 +12,12 @@ router
   .post(productsController.create)
   .get(productsController.getAll);
 
-router.route("/api/products/selling").get(productsController.getSellingProduct);
+router
+  .route("/api/products/selling")
+  .get(productsController.getSellingProduct)
+router
+  .route("/api/products/selling/:id")
+  .put(productsController.sellProduct);
 
 // If no API routes are hit, send the React app
 router.use(function (req, res) {
