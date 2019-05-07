@@ -13,6 +13,26 @@ import storeImage from "../images/arms.jpg"
     
   }
 export default class Admin extends React.Component {
+  // state={
+
+  // }
+
+  //   adminCheck(){
+  //  const { email, passwordOne } = this.state;
+
+  //     this.props.firebase
+  //       .doSignInWithEmailAndPassword(this.state.email, this.state.password)
+  //       // this.auth.signInWithEmailAndPassword(this.state.email, this.state.password);
+  //       .then(authUser => {
+  //         console.log("We are logged in!", authUser);
+  //         // this.setState({ ...INITIAL_STATE });
+  //       })
+  //       .catch(error => {
+  //         console.log("this is our error!!!", error);
+  //       });
+
+  //     // event.preventDefault();
+  //   }
   render() {
     return (
         <div style={homeStyle}>
@@ -21,12 +41,13 @@ export default class Admin extends React.Component {
             {firebase => {
               return (
                 <AdminForm firebase={firebase} />,
-                <AdminLogin firebase={firebase} />
+                <AdminLogin adminCheck={this.adminCheck} firebase={firebase} />
               );
             }}
           </FirebaseContext.Consumer>
-          <ProdForm />
-          <ProductPool />
+          {/* <ProdForm />
+          <ProductPool /> */}
+      
       </Container>
 
       <Footer />

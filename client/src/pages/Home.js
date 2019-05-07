@@ -10,7 +10,8 @@ import Button from "../components/Button";
 import "./Home.css";
 import ProductYeet from "../components/ProductDisplay/ProductYeet";
 import CartPage from "./Cartpage";
-import Footer from "../components/Footer/index"
+import Shop from "../shop";
+
 // export default class Home extends React.Component {
 import storeImage from "../images/arms.jpg"
   const homeStyle = {
@@ -28,13 +29,14 @@ function Home(props) {
           <Col sm="12" md={{ size: 6, offset: 3 }}>
             <h1>Home Page</h1>
             <Carousel style={{ padding: "50px" }} />
-            <Card />
+
           </Col>
           <Col>
             <CartPage client={props.client} />
           </Col>
         </Row>
-        <ProductYeet />
+        {/* <ProductYeet client={props.client} /> */}
+        <Shop client={props.client} />
       </Container>
       
       

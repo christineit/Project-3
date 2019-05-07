@@ -12,10 +12,10 @@ router
   .post(productsController.create)
   .get(productsController.getAll);
 
-// router.route("/api/selling").get(productsController.getSellingProduct);
+router.route("/api/products/selling").get(productsController.getSellingProduct);
 
 // If no API routes are hit, send the React app
-router.use(function(req, res) {
+router.use(function (req, res) {
   res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
 
