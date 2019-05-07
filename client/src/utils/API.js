@@ -16,4 +16,5 @@ export default {
   sellProduct: function (productData) {
     return axios.put("/api/products/selling/:id", productData)
   }
+ 
 };

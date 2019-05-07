@@ -68,7 +68,7 @@ export default class AdminLogin extends React.Component {
             {/* <ProductPool /> */}
           </div>
         ) : (
-            <div>Login please</div>
+            <div>Login to add new product</div>
           )}
       </div>
     );

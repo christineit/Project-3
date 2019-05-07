@@ -14,21 +14,33 @@ export default class ProductCreate extends React.Component {
         description: "",
         price: 0,
         images: "",
-        keywords: ""
+        keywords: "",
+        isSelling: false
 
     };
+    // componentDidMount() {
+    //     this.loadProduct(id);
+    //   }
+    //   loadProduct= id => {
+    //     API.getProduct(id)
+    //       .then(res =>
+    //         this.setState({ productData: res.data}, {isSelling:true},
+    //             console.log(res.data))
+    //       )
+    //       .catch(err => console.log(err));
+    //   }
 
     handleInputChange = e => {
         let value = e.target.value;
         let yeet = e.target.name;
         let re = /^[0-9\b]+$/;
 
-        if (e.target.type === "number" && !isNaN(value)) {
+        // if (e.target.type === "number" && !re(value)) {
 
             this.setState({
                 [yeet]: value
             })
-        }
+        // }
 
         if (e.target.type === "text" && !isNaN(value)) {
             console.log("okee")
