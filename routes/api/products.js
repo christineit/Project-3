@@ -5,8 +5,8 @@ const db = require("../../models");
 router
   .route("/api/products")
   // .get(productsController.findAll)
-  .post(productsController.create)
-  .get(productsController.getAll);
+  .post(productsController.create);
+// .get(productsController.getAll);
 
 // router.route("/api/selling").get(productsController.getSellingProduct);
 
