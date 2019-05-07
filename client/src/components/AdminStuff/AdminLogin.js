@@ -1,11 +1,13 @@
 import React from "react";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
+import CreateProductForm from "./CreateProductForm";
+import ProductPool from "./ProductPool";
 
 export default class AdminLogin extends React.Component {
   state = {
     email: "",
     password: "",
-    authenticated: false
+    adminHere: false
   };
 
   handleTyping = event => {
@@ -21,7 +23,7 @@ export default class AdminLogin extends React.Component {
       // this.auth.signInWithEmailAndPassword(this.state.email, this.state.password);
       .then(authUser => {
         console.log("We are logged in!", authUser);
-        // this.setState({ ...INITIAL_STATE });
+        this.setState({ adminHere: true });
       })
       .catch(error => {
         console.log("this is our error!!!", error);
@@ -59,6 +61,15 @@ export default class AdminLogin extends React.Component {
           {/* <Button>Submit</Button> */}
         </Form>
         <button onClick={this.onSubmit}>Login!</button>
+
+        {this.state.adminHere ? (
+          <div>
+            <CreateProductForm />
+            <ProductPool />
+          </div>
+        ) : (
+          <div>Login please</div>
+        )}
       </div>
     );
   }

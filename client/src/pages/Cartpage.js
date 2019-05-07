@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Products from "../components/shopify/Products";
 import Cart from "../components/shopify/Cart";
 
-class App extends Component {
+class CartPage extends Component {
   constructor() {
     super();
 
@@ -92,22 +92,22 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App__header">
-          {!this.state.isCartOpen && (
-            <div className="App__view-cart-wrapper">
-              <button
-                className="App__view-cart"
-                onClick={() => this.setState({ isCartOpen: true })}
-              >
-                Cart
-              </button>
-            </div>
-          )}
-          <div className="App__title">
+        {/* <header className="App__header"> */}
+        {!this.state.isCartOpen && (
+          <div className="App__view-cart-wrapper">
+            <button
+              className="App__view-cart"
+              onClick={() => this.setState({ isCartOpen: true })}
+            >
+              Cart
+            </button>
+          </div>
+        )}
+        {/* <div className="App__title">
             <h1>{this.state.shop.name}: React Example</h1>
             <h2>{this.state.shop.description}</h2>
-          </div>
-        </header>
+          </div> */}
+        {/* </header> */}
         {/* <Products
           products={this.state.products}
           client={this.props.client}
@@ -125,4 +125,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default CartPage;
