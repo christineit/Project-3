@@ -74,8 +74,7 @@ class SignUpForm extends Component {
         {error && <p>{error.message}</p>}
         </form>
 );  
-}
-}
+
 
 
 
