@@ -11,5 +11,10 @@ export default {
   getAllProducts: function (productData) {
 
     return axios.get("/api/products", productData)
+  },
+
+  getSellingProduct: function (productData) {
+
+    return axios.get("/api/selling", productData)
   }
 };

@@ -14,6 +14,12 @@ module.exports = {
       .find(req.query)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err))
+  },
+  getSellingProduct: function (req, res) {
+    db.Product
+      .findOne({})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err))
   }
 
 
