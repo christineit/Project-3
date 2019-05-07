@@ -11,10 +11,10 @@ export default {
   getSellingProduct: function (productData) {
     console.log(productData);
 
-    return axios.get("/api/products/selling", productData);
+    return axios.get("http://localhost:3001/api/products/selling", productData);
   },
-  sellProduct: function (productData) {
-    return axios.put("/api/products/selling/:id", productData)
+  sellProduct: function (id, productData) {
+    console.log("this is our id!!!", id);
+    return axios.post("http://localhost:3001/api/products/selling/" + id);
   }
- 
 };

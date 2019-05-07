@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import API from "../utils/API.js";
 
 class CustomCart extends Component {
   state = {
@@ -20,6 +21,9 @@ class CustomCart extends Component {
 
   purchase = () => {
     console.log("time to do some backend things!!");
+    API.sellProduct("15cd1fe499c40973250018025").then(res => {
+      console.log("helloooo", res);
+    });
   };
 
   render() {

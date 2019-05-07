@@ -4,14 +4,11 @@ import { Container, Row, Col } from "reactstrap";
 import Popup from "../components/Popup";
 import Card from "../components/Card";
 import Carousel from "../components/Carousel";
-// import Carousel from "../components/Carousel";
-import Button from "../components/Button";
-// import ProductYeet from "../components/ProductDisplay/ProductYeet"
 import "./Home.css";
 import ProductYeet from "../components/ProductDisplay/ProductYeet";
 import CartPage from "./Cartpage";
 import Shop from "../shop";
-
+import Footer from "../components/Footer"
 import CustomCart from "./customcart.js";
 
 // export default class Home extends React.Component {
