@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Jumbotron, Button } from "reactstrap"
 import API from "../../utils/API"
+
 export default class ProductPool extends React.Component {
     state = {
         productlist: []
@@ -14,7 +15,17 @@ export default class ProductPool extends React.Component {
                 this.setState({ productlist: res.data })
             })
     }
+<<<<<<< HEAD
+    sellProduct = (id) => {
+
+        API.sellProduct(id).then(res => {
+            console.log(res)
+        })
+
+    }
+=======
         
+>>>>>>> master
     render() {
         return (
             <div>
@@ -25,6 +36,7 @@ export default class ProductPool extends React.Component {
 
                             return (
                                 <div key={product._id}>
+                                    <Button id={product._id} onClick={() => this.sellProduct(product._id)}>Sell Item </Button>
                                     name: {product.productname},
                                     description: {product.description},
                                     category:{product.category},
@@ -32,7 +44,6 @@ export default class ProductPool extends React.Component {
                                     quantity:{product.quantity},
                                     price:{product.price},
                                     images: {product.images}
-                                    <Button id={product._id}>Sell Item </Button>
                                 </div>
                             )
                         })

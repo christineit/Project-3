@@ -26,6 +26,19 @@ module.exports = {
         console.log('error', err);
         res.status(422).json(err)
       })
+  },
+  sellProduct: function (req, res) {
+    db.Product
+      .findOneAndUpdate({ _id: req.params.id }, { $set: { selling: true } }, { new: true })
+      .then((dbModel) => {
+        console.log('got this back from search!!', dbModel)
+
+      })
+      .catch((err) => {
+        console.log('error', err);
+        res.status(422).json(err)
+      })
+
   }
 
 };
