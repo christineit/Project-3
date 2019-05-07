@@ -20,7 +20,7 @@ function Home(props) {
           <Col sm="12" md={{ size: 6, offset: 3 }}>
             <h1>Home Page</h1>
             <Carousel style={{ padding: "50px" }} />
-            <Card />
+
           </Col>
           <Col>
             <CartPage client={props.client} />

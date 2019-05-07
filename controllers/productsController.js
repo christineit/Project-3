@@ -17,9 +17,15 @@ module.exports = {
   },
   getSellingProduct: function (req, res) {
     db.Product
-      .findOne({})
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err))
+      .findOne({ productname: "christine" })
+      .then((dbModel) => {
+        console.log('got this back from search!!', dbModel)
+        res.json(dbModel)
+      })
+      .catch((err) => {
+        console.log('error', err);
+        res.status(422).json(err)
+      })
   }
 
 

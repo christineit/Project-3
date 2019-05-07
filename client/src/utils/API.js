@@ -9,6 +9,8 @@ export default {
     return axios.get("http://localhost:3001/api/products", productData);
   },
   getSellingProduct: function (productData) {
+    console.log(productData);
+
     return axios.get("/api/products/selling", productData);
   }
 };
