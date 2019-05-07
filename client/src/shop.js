@@ -27,8 +27,10 @@ class Shop extends Component {
     });
 
     this.props.client.product.fetchAll().then(res => {
+      let arr = [];
+      arr.push(res[0]);
       this.setState({
-        products: res
+        products: arr
       });
     });
 
