@@ -12,5 +12,8 @@ export default {
     console.log(productData);
 
     return axios.get("/api/products/selling", productData);
+  },
+  sellProduct: function (productData) {
+    return axios.put("/api/products/selling/:id", productData)
   }
 };

@@ -45,7 +45,7 @@ export default class ProductCreate extends React.Component {
 
     }
 
-   
+
     handleFormSubmit = e => {
         e.preventDefault();
         let formData = {
@@ -56,15 +56,16 @@ export default class ProductCreate extends React.Component {
             description: this.state.description,
             price: this.state.price,
             images: this.state.images,
-            keywords:this.state.keywords
-         }   
-         console.log("line 41 prodform.js" , formData);
-         
+            keywords: this.state.keywords,
+
+        }
+        console.log("line 41 prodform.js", formData);
+
         API
-        .saveProduct(formData)
-        .then(res => console.log("Book Saved, line 45 prodform.js"))
-        .catch(err => console.log(err));
-         console.log(this.state)
+            .saveProduct(formData)
+            .then(res => console.log("Book Saved, line 45 prodform.js"))
+            .catch(err => console.log(err));
+        console.log(this.state)
     }
 
     render() {
