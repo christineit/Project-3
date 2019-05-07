@@ -7,6 +7,7 @@ import Carousel from "../components/Carousel";
 // import Carousel from "../components/Carousel";
 import Button from "../components/Button";
 import "./Home.css";
+import ProductYeet from "../components/ProductDisplay/ProductYeet";
 import CartPage from "./Cartpage";
 
 // export default class Home extends React.Component {
@@ -25,6 +26,7 @@ function Home(props) {
             <CartPage client={props.client} />
           </Col>
         </Row>
+        <ProductYeet />
       </Container>
     </div>
   );
