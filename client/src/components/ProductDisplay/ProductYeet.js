@@ -3,15 +3,11 @@ import API from "../../utils/API"
 // import ProductCarousel from "./ProductCarousel"
 export default class ProductYeet extends React.Component {
     state = {
-<<<<<<< HEAD
-        sellingProduct: []
-=======
         productname: "",
         category: "",
         description: "",
         styleChange: false
         // img1="https://media.licdn.com/dms/image/C4E03AQH2SWTO8f_6yQ/profile-displayphoto-shrink_200_200/0?e=1560384000&v=beta&t=RMDyma2mVGDT9Im30IdndDZZJlknoVH5YFI9RQh2rk4"
->>>>>>> master
     }
 
     componentDidMount = () => {

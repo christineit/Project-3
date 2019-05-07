@@ -10,6 +10,7 @@ import Cart from "./components/shopify/Cart";
 // import CartPage from "./pages/Cartpage.js";
 import Client from "shopify-buy";
 import Particles from "react-particles-js";
+import About from "../src/pages/About"
 
 function App(props) {
   const client = Client.buildClient({
@@ -35,6 +36,7 @@ function App(props) {
             />
             <Route exact path="/products" component={Products} />
             <Route exact path="/admin" component={Admin} />
+            <Route exact path="/about" component={About} />
             <Route path="/shop" component={() => <Shop client={client} />} />
             {/* <Route exact path="/books" component={Books} />
               <Route exact path="/books/:id" component={Detail} />
