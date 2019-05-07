@@ -9,34 +9,25 @@ import Button from "../components/Button";
 // import ProductYeet from "../components/ProductDisplay/ProductYeet"
 import "./Home.css";
 import ProductYeet from "../components/ProductDisplay/ProductYeet";
-import CartPage from "./Cartpage";
-import Shop from "../shop";
-
+// import CartPage from "./Cartpage";
+import Footer from "../components/Footer/index"
+import Teaminfo from "../components/Team/index"
 // export default class Home extends React.Component {
-import storeImage from "../images/arms.jpg"
+    import storeImage from "../images/arms.jpg"
   const homeStyle = {
     backgroundImage: `url(${storeImage})`,
     
   }
-
-function Home(props) {
+function About(props) {
   // render() {
   return (
     
     <div className="background" style={homeStyle}>
       <Container>
-        <Row>
-          <Col sm="12" md={{ size: 6, offset: 3 }}>
-            <h1>Home Page</h1>
-            <Carousel style={{ padding: "50px" }} />
-
-          </Col>
-          <Col>
-            <CartPage client={props.client} />
-          </Col>
-        </Row>
-        {/* <ProductYeet client={props.client} /> */}
-        <Shop client={props.client} />
+      <br></br>
+      <br></br>
+        <Teaminfo />
+        
       </Container>
       
       
@@ -56,4 +47,4 @@ function Home(props) {
   );
   // }
 }
-export default Home;
+export default About;

@@ -5,6 +5,7 @@ export default class ProductPool extends React.Component {
     state = {
         productlist: []
     }
+    
 
     componentDidMount = () => {
         API.
@@ -13,7 +14,7 @@ export default class ProductPool extends React.Component {
                 this.setState({ productlist: res.data })
             })
     }
-
+        
     render() {
         return (
             <div>
@@ -24,8 +25,13 @@ export default class ProductPool extends React.Component {
 
                             return (
                                 <div key={product._id}>
-                                    name: {product.productname}
-                                    description: {product.description}
+                                    name: {product.productname},
+                                    description: {product.description},
+                                    category:{product.category},
+                                    size:{product.size},
+                                    quantity:{product.quantity},
+                                    price:{product.price},
+                                    images: {product.images}
                                     <Button id={product._id}>Sell Item </Button>
                                 </div>
                             )

@@ -13,4 +13,5 @@ export default {
 
     return axios.get("/api/products/selling", productData);
   }
+ 
 };

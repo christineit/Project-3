@@ -73,6 +73,16 @@ export default class NavBar extends React.Component {
                   Admin
                 </NavLink>
               </NavItem>
+              <NavItem>
+                <NavLink
+                  tag={RRNavLink}
+                  exact
+                  to="/about"
+                  activeClassName="active"
+                >
+                    About
+                </NavLink>
+              </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   Project
