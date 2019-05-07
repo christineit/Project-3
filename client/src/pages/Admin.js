@@ -8,6 +8,26 @@ import { FirebaseContext } from "../components/Firebase";
 import { Container, Row, Col } from "reactstrap";
 
 export default class Admin extends React.Component {
+  // state={
+
+  // }
+
+  //   adminCheck(){
+  //  const { email, passwordOne } = this.state;
+
+  //     this.props.firebase
+  //       .doSignInWithEmailAndPassword(this.state.email, this.state.password)
+  //       // this.auth.signInWithEmailAndPassword(this.state.email, this.state.password);
+  //       .then(authUser => {
+  //         console.log("We are logged in!", authUser);
+  //         // this.setState({ ...INITIAL_STATE });
+  //       })
+  //       .catch(error => {
+  //         console.log("this is our error!!!", error);
+  //       });
+
+  //     // event.preventDefault();
+  //   }
   render() {
     return (
       <Container>
@@ -16,12 +36,12 @@ export default class Admin extends React.Component {
             {firebase => {
               return (
                 <AdminForm firebase={firebase} />,
-                <AdminLogin firebase={firebase} />
+                <AdminLogin adminCheck={this.adminCheck} firebase={firebase} />
               );
             }}
           </FirebaseContext.Consumer>
-          <ProdForm />
-          <ProductPool />
+          {/* <ProdForm />
+          <ProductPool /> */}
         </div>
       </Container>
     );
