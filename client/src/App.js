@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavBar from "./components/Navbar";
-import Cartpage from "./pages/Cartpage";
+import CartPage from "./pages/Cartpage";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import Shop from "./shop.js";
 import Admin from "./pages/Admin";
 import Cart from "./components/shopify/Cart";
-import CartPage from "./pages/Cartpage.js";
+// import CartPage from "./pages/Cartpage.js";
 import Client from "shopify-buy";
 import Particles from "react-particles-js";
 
@@ -22,7 +22,12 @@ function App(props) {
         <div>
           <NavBar />
           <Switch>
-            <Route exact path="/" component={Home} />
+            {/* <Route exact path="/" component={Home} /> */}
+            <Route
+              exact
+              path="/"
+              render={() => <Home client={props.client} />}
+            />
             <Route
               exact
               path="/cart"
