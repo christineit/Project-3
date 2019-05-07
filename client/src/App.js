@@ -1,14 +1,15 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavBar from "./components/Navbar";
-import Cartpage from "./pages/Cartpage";
+import CartPage from "./pages/Cartpage";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import Shop from "./shop.js";
 import Admin from "./pages/Admin";
 import Cart from "./components/shopify/Cart";
-import CartPage from "./pages/Cartpage.js";
+// import CartPage from "./pages/Cartpage.js";
 import Client from "shopify-buy";
+import Particles from "react-particles-js";
 
 function App(props) {
   const client = Client.buildClient({
@@ -16,25 +17,86 @@ function App(props) {
     domain: "graphql.myshopify.com"
   });
   return (
-    <Router>
-      <div>
-        <NavBar />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route
-            exact
-            path="/cart"
-            render={() => <CartPage client={props.client} />}
+    <div>
+      <Router>
+        <div>
+          <NavBar />
+          <Switch>
+            {/* <Route exact path="/" component={Home} /> */}
+            <Route
+              exact
+              path="/"
+              render={() => <Home client={props.client} />}
+            />
+            <Route
+              exact
+              path="/cart"
+              render={() => <CartPage client={props.client} />}
+            />
+            <Route exact path="/products" component={Products} />
+            <Route exact path="/admin" component={Admin} />
+            <Route path="/shop" component={() => <Shop client={client} />} />
+            {/* <Route exact path="/books" component={Books} />
+              <Route exact path="/books/:id" component={Detail} />
+              <Route component={NoMatch} /> */}
+          </Switch>
+          <Particles
+            params={{
+              particles: {
+                number: {
+                  value: 160,
+
+                  density: {
+                    enable: false
+                  }
+                },
+                size: {
+                  value: 3,
+                  random: true,
+                  anim: {
+                    speed: 4,
+                    size_min: 0.3
+                  }
+                },
+                line_linked: {
+                  enable: false
+                },
+                move: {
+                  random: true,
+                  speed: 1,
+                  direction: "top",
+                  out_mode: "out"
+                }
+              },
+              interactivity: {
+                events: {
+                  onhover: {
+                    enable: true,
+                    mode: "bubble"
+                  },
+                  onclick: {
+                    enable: true,
+                    mode: "repulse"
+                  }
+                },
+                modes: {
+                  bubble: {
+                    distance: 250,
+                    duration: 2,
+                    size: 0,
+                    opacity: 0
+                  },
+                  repulse: {
+                    distance: 400,
+                    duration: 4
+                  }
+                }
+              }
+            }}
           />
-          <Route exact path="/products" component={Products} />
-          <Route exact path="/admin" component={Admin} />
-          <Route path="/shop" component={() => <Shop client={client} />} />
-          {/* <Route exact path="/books" component={Books} />
-            <Route exact path="/books/:id" component={Detail} />
-            <Route component={NoMatch} /> */}
-        </Switch>
-      </div>
-    </Router>
+        </div>
+      </Router>
+    </div>
   );
 }
 
