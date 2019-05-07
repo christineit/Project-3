@@ -9,12 +9,7 @@ import {
 
 const items = [
   {
-<<<<<<< HEAD
-    src:
-      "https://media.licdn.com/dms/image/C4E03AQH2SWTO8f_6yQ/profile-displayphoto-shrink_200_200/0?e=1560384000&v=beta&t=RMDyma2mVGDT9Im30IdndDZZJlknoVH5YFI9RQh2rk4",
-=======
     id: 1,
->>>>>>> master
     altText: "Slide 1",
     caption: "Slide 1"
   },
