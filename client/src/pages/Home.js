@@ -8,7 +8,7 @@ import "./Home.css";
 import ProductYeet from "../components/ProductDisplay/ProductYeet";
 import CartPage from "./Cartpage";
 import Shop from "../shop";
-import Footer from "../components/Footer"
+import Footer from "../components/Footer";
 import CustomCart from "./customcart.js";
 
 // export default class Home extends React.Component {
