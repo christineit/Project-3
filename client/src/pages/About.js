@@ -12,7 +12,7 @@ import ProductYeet from "../components/ProductDisplay/ProductYeet";
 import Footer from "../components/Footer/index"
 import Teaminfo from "../components/Team/index"
 // export default class Home extends React.Component {
-import storeImage from "../images/arms.jpg"
+// import storeImage from "../images/arms.jpg"
 // const homeStyle = {
 //   backgroundImage: `url(${storeImage})`,
 
