@@ -70,7 +70,7 @@ export default class NavBar extends React.Component {
                   to="/admin"
                   activeClassName="active"
                 >
-                  Admin
+                  {/* Admin
                 </NavLink>
               </NavItem>
               <NavItem>
@@ -79,8 +79,8 @@ export default class NavBar extends React.Component {
                   exact
                   to="/about"
                   activeClassName="active"
-                >
-                    About
+                > */}
+                  About
                 </NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
