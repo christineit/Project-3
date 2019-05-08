@@ -49,9 +49,8 @@ export default class NavBar extends React.Component {
                   exact
                   to="/cart"
                   activeClassName="active"
-                >
-                  Cart
-                </NavLink>
+                  class="fas fa-shopping-cart"
+                />
               </NavItem>
               <NavItem>
                 <NavLink
