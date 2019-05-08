@@ -10,40 +10,31 @@ import Button from "../components/Button";
 import "./Home.css";
 import ProductYeet from "../components/ProductDisplay/ProductYeet";
 // import CartPage from "./Cartpage";
-import Footer from "../components/Footer/index"
-import Teaminfo from "../components/Team/index"
+import Footer from "../components/Footer/index";
+import Teaminfo from "../components/Team/index";
+
 // export default class Home extends React.Component {
-    import storeImage from "../images/arms.jpg"
-  const homeStyle = {
-    backgroundImage: `url(${storeImage})`,
-    
-  }
+import storeImage from "../Images/arms.jpg";
+const homeStyle = {
+  backgroundImage: `url(${storeImage})`
+};
 function About(props) {
   // render() {
   return (
-    
     <div className="background" style={homeStyle}>
       <Container>
-      <br></br>
-      <br></br>
+        <br />
+        <br />
         <Teaminfo />
-        
       </Container>
-      
-      
-       
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      
+
+      <br />
+      <br />
+      <br />
+      <br />
+
       <Footer />
-      </div>
-    
-  
-    
-      
-     
+    </div>
   );
   // }
 }
