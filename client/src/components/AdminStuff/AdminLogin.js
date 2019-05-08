@@ -65,7 +65,7 @@ export default class AdminLogin extends React.Component {
         {this.state.adminHere ? (
           <div>
             <CreateProductForm />
-            {/* <ProductPool /> */}
+            <ProductPool />
           </div>
         ) : (
             <div>Login to add new product</div>
