@@ -13,15 +13,15 @@ import Footer from "../components/Footer/index"
 import Teaminfo from "../components/Team/index"
 // export default class Home extends React.Component {
 import storeImage from "../images/arms.jpg"
-const homeStyle = {
-  backgroundImage: `url(${storeImage})`,
+// const homeStyle = {
+//   backgroundImage: `url(${storeImage})`,
 
-}
+// }
 function About(props) {
   // render() {
   return (
 
-    <div className="background" style={homeStyle}>
+    <div className="background">
       <Container>
         <br></br>
         <br></br>
