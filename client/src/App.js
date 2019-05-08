@@ -15,10 +15,10 @@ import About from "../src/pages/About";
 import CustomCart from "./pages/customcart.js";
 
 function App(props) {
-  const client = Client.buildClient({
-    storefrontAccessToken: "dd4d4dc146542ba7763305d71d1b3d38",
-    domain: "graphql.myshopify.com"
-  });
+  // const client = Client.buildClient({
+  //   storefrontAccessToken: "dd4d4dc146542ba7763305d71d1b3d38",
+  //   domain: "graphql.myshopify.com"
+  // });
   return (
     <div>
       <Router>
@@ -40,7 +40,7 @@ function App(props) {
             <Route exact path="/customCart" component={CustomCart} />
             <Route exact path="/admin" component={Admin} />
             <Route exact path="/about" component={About} />
-            <Route path="/shop" component={() => <Shop client={client} />} />
+            <Route path="/shop" component={() => <Shop client={props.client} />} />
             {/* <Route exact path="/books" component={Books} />
               <Route exact path="/books/:id" component={Detail} />
               <Route component={NoMatch} /> */}
