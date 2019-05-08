@@ -1,11 +1,25 @@
 import React, { Component } from "react";
+import API from '../../utils/API.js';
 
 class LineItem extends Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      title: ''
+    }
+
     this.decrementQuantity = this.decrementQuantity.bind(this);
     this.incrementQuantity = this.incrementQuantity.bind(this);
+  }
+
+  componentWillMount() {
+    API.getSellingProduct().then(res => {
+
+      console.log('OUR PRODUCTS IN TH CART!!!!!!', res.data);
+      this.setState({ title: res.data.productname })
+
+    })
   }
 
   decrementQuantity(lineItemId) {
@@ -18,6 +32,8 @@ class LineItem extends Component {
     this.props.updateQuantityInCart(lineItemId, updatedQuantity);
   }
 
+
+
   render() {
     return (
       <li className="Line-item">
@@ -25,17 +41,17 @@ class LineItem extends Component {
           {this.props.line_item.variant.image ? (
             <img
               src={this.props.line_item.variant.image.src}
-              alt={`${this.props.line_item.title} product shot`}
+              alt={`${this.state.title} product shot`}
             />
           ) : null}
         </div>
         <div className="Line-item__content">
           <div className="Line-item__content-row">
             <div className="Line-item__variant-title">
-              {this.props.line_item.variant.title}
+              {this.state.title}
             </div>
             <span className="Line-item__title">
-              {this.props.line_item.title}
+              {this.state.title}
             </span>
           </div>
           <div className="Line-item__content-row">

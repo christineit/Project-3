@@ -59,6 +59,7 @@ export default class ProductPool extends React.Component {
             <div>
                 <Jumbotron>
                     Test Pool
+                    {/* provide radio buttons for form to turn on selling:true */}
                     <button onClick={this.getProducts} >Get Products</button>
                     {
                         this.state.productlist.map(product => {

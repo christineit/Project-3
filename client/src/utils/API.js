@@ -15,6 +15,6 @@ export default {
   },
   sellProduct: function (id, productData) {
     console.log("this is our id!!!", id);
-    return axios.post("http://localhost:3001/api/products/selling/" + id);
+    return axios.post("/api/products/selling/" + id);
   }
 };

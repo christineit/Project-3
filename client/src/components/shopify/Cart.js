@@ -9,6 +9,7 @@ class Cart extends Component {
   }
 
   openCheckout() {
+    console.log(this.props.checkout.webUrl)
     window.open(this.props.checkout.webUrl);
   }
 

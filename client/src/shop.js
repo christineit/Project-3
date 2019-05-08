@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Products from "./components/shopify/Products";
 import Cart from "./components/shopify/Cart";
+import API from './utils/API'
 
 class Shop extends Component {
   constructor() {
@@ -26,19 +27,42 @@ class Shop extends Component {
       });
     });
 
+    API.getSellingProduct().then(res => {
+      console.log('selling products we got back in the shop!!!', res.data)
+      let arr = []
+      arr.push(res.data)
+      // this.setState({
+      //   products: arr
+      // });
+    })
+
     this.props.client.product.fetchAll().then(res => {
-      let arr = [];
-
-      console.log("single products", res[0]);
-
+      // let arr = [];
+      console.log("single products FROM SHOPIFY NEEDS TO LOOK LIKE THIS", res[0]);
       var clone = Object.assign({}, res[0]);
-      clone.title = "TOM PRODUCT!!!!!!!";
+      // clone.title = "TOM PRODUCT!!!!!!!";
+      // arr.push(clone);
 
-      arr.push(clone);
 
-      this.setState({
-        products: arr
-      });
+      API.getSellingProduct().then(res => {
+        console.log('selling products we got back in the shop!!!', res.data)
+        let arr = []
+
+        clone.title = res.data.productname
+        clone.price = res.data.price
+
+
+        arr.push(clone)
+        this.setState({
+          products: [clone]
+        });
+      })
+
+
+
+      // this.setState({
+      //   products: arr
+      // });
     });
 
     this.props.client.shop.fetchInfo().then(res => {
@@ -59,8 +83,14 @@ class Shop extends Component {
     return this.props.client.checkout
       .addLineItems(checkoutId, lineItemsToAdd)
       .then(res => {
+        var clone = Object.assign({}, res);
+        // console.log("THIS IS THE CHECKOUT RES!!!!! ", clone.lineItems[0].title)
+
+
+        // res.lineItems[0].title = 'TOM TEST IN CART'
+
         this.setState({
-          checkout: res
+          checkout: clone
         });
       });
   }
