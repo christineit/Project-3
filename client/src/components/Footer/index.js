@@ -16,8 +16,8 @@ function Footer() {
     <div className="card" style={footerStyle}>      
         <div className="row"style={footerStyle}>
         <div className="col">
-        
-       </div>
+          
+        </div>
        <div class="col">
         <div className="card-body">
           <h5 className="card-title" style={footerStyle}>Copyright © 2019</h5>

@@ -34,10 +34,10 @@ function Home(props) {
             <Card style={{ padding: "50px" }} />
           </Col>
           
-          <Col>{/* <CartPage client={props.client} /> */}</Col>
+          {/* <Col><CartPage client={props.client} /></Col> */}
         </Row>
         {/* <ProductYeet client={props.client} /> */}
-        {/* <Shop client={props.client} /> */}
+        <Shop client={props.client} />
           
       </Container>
 
