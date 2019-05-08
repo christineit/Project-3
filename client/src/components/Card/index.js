@@ -1,28 +1,25 @@
 import React from "react";
-import "./style.css";
+const cardStyle = {
+    textAlign: "center",
+    backgroundColor: "white",
+    padding: "15px",
+    // height: "100px",
+    maximumWidth: "100%"
+  }
 
-import {
-  Card,
-  CardText,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  Button
-} from "reactstrap";
 
-const Description = props => {
-  return (
-    <div>
-      <Card>
-        <CardBody className="text-center">
-          <CardTitle>Product Description</CardTitle>
-          <CardSubtitle>Something clever</CardSubtitle>
-          <CardText>This is pretty awesome</CardText>
-          <Button>Add to Cart</Button>
-        </CardBody>
-      </Card>
+function Card() {
+    return (
+      <div className= "card" style={cardStyle}>
+      <div className="card-body">
+        <h5 className="card-title">Product Name</h5>
+        <p className="card-text">Description</p>
+        <p className="card-text">Price</p>
+        <p className="card-text">Quantity</p>
+        <button style={{float: "center"}}>Add to Cart</button>
+      </div>
     </div>
-  );
-};
+    )
+  }
 
-export default Description;
+  export default Card; 

@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 import CreateProductForm from "./CreateProductForm";
 import ProductPool from "./ProductPool";
-
+import ProdForm from "./ProdForm"
 export default class AdminLogin extends React.Component {
   state = {
     email: "",
@@ -38,8 +38,8 @@ export default class AdminLogin extends React.Component {
       <div>
         {this.state.adminHere ? (
           <div>
-            <CreateProductForm />
-            <ProductPool />
+            {/* <ProdForm /> */}
+
           </div>
         ) : (
             <div><Form className="">
@@ -67,6 +67,8 @@ export default class AdminLogin extends React.Component {
             </Form>
               <button onClick={this.onSubmit}>Login!</button></div>
           )}
+        <ProdForm />
+
       </div>
     );
   }
