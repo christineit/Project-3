@@ -28,7 +28,14 @@ class Shop extends Component {
 
     this.props.client.product.fetchAll().then(res => {
       let arr = [];
-      arr.push(res[0]);
+
+      console.log("single products", res[0]);
+
+      var clone = Object.assign({}, res[0]);
+      clone.title = "TOM PRODUCT!!!!!!!";
+
+      arr.push(clone);
+
       this.setState({
         products: arr
       });
