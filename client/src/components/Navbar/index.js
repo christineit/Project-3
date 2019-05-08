@@ -63,23 +63,23 @@ export default class NavBar extends React.Component {
                   Products
                 </NavLink>
               </NavItem>
-              <NavItem>
+              {/* <NavItem>
                 <NavLink
                   tag={RRNavLink}
                   exact
                   to="/admin"
                   activeClassName="active"
                 >
-                  {/* Admin
+                  Admin
                 </NavLink>
-              </NavItem>
+              </NavItem> */}
               <NavItem>
                 <NavLink
                   tag={RRNavLink}
                   exact
                   to="/about"
                   activeClassName="active"
-                > */}
+                >
                   About
                 </NavLink>
               </NavItem>
