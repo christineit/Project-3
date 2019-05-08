@@ -1,8 +1,10 @@
 import React from "react";
 const teamStyle = {
   textAlign: "center",
-  backgroundColor: "lightblue"
+ 
+  opacity: "0.5",
 }
+
 function Teaminfo() {
   return (
     <div className="jumbotron jumbotron-fluid" style={teamStyle}>
