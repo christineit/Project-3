@@ -7,8 +7,8 @@ import Client from "shopify-buy";
 
 import "./app.css";
 const client = Client.buildClient({
-  storefrontAccessToken: "dd4d4dc146542ba7763305d71d1b3d38",
-  domain: "graphql.myshopify.com"
+  storefrontAccessToken: "55973bfbbf6eae6e21e02d122de41a08",
+  domain: "https://pacific-wildwood-37887.herokuapp.com/"
 });
 
 ReactDOM.render(
