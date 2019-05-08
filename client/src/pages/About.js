@@ -12,28 +12,23 @@ import ProductYeet from "../components/ProductDisplay/ProductYeet";
 import Footer from "../components/Footer/index";
 import Teaminfo from "../components/Team/index";
 
-// export default class Home extends React.Component {
 
-// const homeStyle = {
-//   backgroundImage: `url(${storeImage})`,
 
-// }
+
 function About(props) {
   // render() {
   return (
     <div className="background">
       <Container>
-        <br />
-        <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
         <Teaminfo />
       </Container>
-
-      <br />
-      <br />
-      <br />
-      <br />
-
-      <Footer />
+       <Footer />
     </div>
   );
   // }
