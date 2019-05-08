@@ -2,7 +2,7 @@ import React from "react";
 const footerStyle = {
     textAlign: "center",
     backgroundColor: "white",
-    borderTop: "3px solid yellow",
+    borderTop: "1px solid black",
     textAlign: "center",
     padding: "15px",
     position: "fixed",
