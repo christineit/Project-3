@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 import CreateProductForm from "./CreateProductForm";
 import ProductPool from "./ProductPool";
-
+import ProdForm from "./ProdForm"
 export default class AdminLogin extends React.Component {
   state = {
     email: "",
@@ -64,12 +64,14 @@ export default class AdminLogin extends React.Component {
 
         {this.state.adminHere ? (
           <div>
-            <CreateProductForm />
-            {/* <ProductPool /> */}
+            {/* <ProdForm /> */}
+
           </div>
         ) : (
             <div>Login to add new product</div>
           )}
+        <ProdForm />
+
       </div>
     );
   }
