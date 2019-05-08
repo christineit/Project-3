@@ -7,9 +7,10 @@ import Client from "shopify-buy";
 
 import "./app.css";
 const client = Client.buildClient({
-  storefrontAccessToken: "55973bfbbf6eae6e21e02d122de41a08",
-  domain: "like-hot-cakes.myshopify.com"
+  storefrontAccessToken: "dd4d4dc146542ba7763305d71d1b3d38",
+  domain: "graphql.myshopify.com"
 });
+
 
 ReactDOM.render(
   <FirebaseContext.Provider value={new Firebase()}>
