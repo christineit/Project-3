@@ -36,39 +36,36 @@ export default class AdminLogin extends React.Component {
     console.log("this is my state", this.state);
     return (
       <div>
-        <Form className="">
-          <FormGroup>
-            <h3 className="text-center">ADMIN LOGIN</h3>
-            <Label for="username">Email:</Label>
-            <Input
-              type="email"
-              name="email"
-              id="Email"
-              placeholder="Hello Admin"
-              onChange={this.handleTyping}
-            />
-          </FormGroup>
-          <FormGroup>
-            <Label for="examplePassword">Password:</Label>
-            <Input
-              type="password"
-              name="password"
-              id="Password"
-              placeholder="Password"
-              onChange={this.handleTyping}
-            />
-          </FormGroup>
-          {/* <Button>Submit</Button> */}
-        </Form>
-        <button onClick={this.onSubmit}>Login!</button>
-
         {this.state.adminHere ? (
           <div>
             {/* <ProdForm /> */}
 
           </div>
         ) : (
-            <div>Login to add new product</div>
+            <div><Form className="">
+              <FormGroup>
+                <h3 className="text-center">ADMIN LOGIN</h3>
+                <Label for="username">Email:</Label>
+                <Input
+                  type="email"
+                  name="email"
+                  id="Email"
+                  placeholder="Hello Admin"
+                  onChange={this.handleTyping}
+                />
+              </FormGroup>
+              <FormGroup>
+                <Label for="examplePassword">Password:</Label>
+                <Input
+                  type="password"
+                  name="password"
+                  id="Password"
+                  placeholder="Password"
+                  onChange={this.handleTyping}
+                />
+              </FormGroup>
+            </Form>
+              <button onClick={this.onSubmit}>Login!</button></div>
           )}
         <ProdForm />
 
