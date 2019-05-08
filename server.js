@@ -35,7 +35,7 @@ app.use(routes);
 //Define local MongoDB URI
 var databaseURL = "mongodb://localhost/productlist";
 //---------------------------------------------------
-if (process.env.MONGO_URI) {
+if (process.env.MONGODB_URI) {
   //this executes if this is being executed in heroku app:
   mongoose.connect(process.env.MONGODB_URI);
 } else {
