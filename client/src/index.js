@@ -8,7 +8,7 @@ import Client from "shopify-buy";
 import "./app.css";
 const client = Client.buildClient({
   storefrontAccessToken: "55973bfbbf6eae6e21e02d122de41a08",
-  domain: "https://pacific-wildwood-37887.herokuapp.com/"
+  domain: "like-hot-cakes.myshopify.com"
 });
 
 ReactDOM.render(
