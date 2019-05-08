@@ -63,7 +63,7 @@ export default class NavBar extends React.Component {
                   Products
                 </NavLink>
               </NavItem>
-              <NavItem>
+              {/* <NavItem>
                 <NavLink
                   tag={RRNavLink}
                   exact
@@ -72,7 +72,7 @@ export default class NavBar extends React.Component {
                 >
                   Admin
                 </NavLink>
-              </NavItem>
+              </NavItem> */}
               <NavItem>
                 <NavLink
                   tag={RRNavLink}
@@ -80,7 +80,7 @@ export default class NavBar extends React.Component {
                   to="/about"
                   activeClassName="active"
                 >
-                    About
+                  About
                 </NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
