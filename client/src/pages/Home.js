@@ -12,15 +12,22 @@ import Footer from "../components/Footer";
 import CustomCart from "./customcart.js";
 
 // export default class Home extends React.Component {
+<<<<<<< HEAD
 
 const homeStyle = {
   backgroundImage: `url(${storeImage})`
 };
+=======
+// import storeImage from "../images/arms.jpg";
+// const homeStyle = {
+//   backgroundImage: `url(${storeImage})`
+// };
+>>>>>>> 88b61052a74966f3011304b05cbdcaba1de8243e
 
 function Home(props) {
   // render() {
   return (
-    <div className="background" style={homeStyle}>
+    <div className="background">
       <Container>
         <Row>
           <Col sm="12" md={{ size: 6, offset: 3 }}>

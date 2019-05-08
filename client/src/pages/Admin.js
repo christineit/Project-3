@@ -6,11 +6,20 @@ import ProductPool from "../components/AdminStuff/ProductPool";
 import AdminLogin from "../components/AdminStuff/AdminLogin";
 import { FirebaseContext } from "../components/Firebase";
 import { Container, Row, Col } from "reactstrap";
+<<<<<<< HEAD
 import Footer from "../components/Footer/index";
 import storeImage from "../Images/arms.jpg";
 const homeStyle = {
   backgroundImage: `url(${storeImage})`
 };
+=======
+import Footer from "../components/Footer/index"
+// import storeImage from "../images/arms.jpg"
+//   const homeStyle = {
+//     backgroundImage: `url(${storeImage})`,
+    
+//   }
+>>>>>>> 88b61052a74966f3011304b05cbdcaba1de8243e
 export default class Admin extends React.Component {
   // state={
 
@@ -34,8 +43,13 @@ export default class Admin extends React.Component {
   //   }
   render() {
     return (
+<<<<<<< HEAD
       <div style={homeStyle}>
         <Container>
+=======
+        <div>
+      <Container>
+>>>>>>> 88b61052a74966f3011304b05cbdcaba1de8243e
           <FirebaseContext.Consumer>
             {firebase => {
               return (
@@ -44,9 +58,16 @@ export default class Admin extends React.Component {
               );
             }}
           </FirebaseContext.Consumer>
+<<<<<<< HEAD
           {/* <ProdForm />
           <ProductPool /> */}
         </Container>
+=======
+          {/* <ProdForm /> */}
+          {/* <ProductPool /> */}
+      
+      </Container>
+>>>>>>> 88b61052a74966f3011304b05cbdcaba1de8243e
 
         <Footer />
       </div>
