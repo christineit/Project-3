@@ -11,7 +11,7 @@ import "./Home.css";
 import ProductYeet from "../components/ProductDisplay/ProductYeet";
 import CartPage from "./Cartpage";
 import Shop from "../shop";
-
+import Footer from "../components/Footer/index"
 // export default class Home extends React.Component {
 import storeImage from "../images/arms.jpg"
   const homeStyle = {
@@ -41,10 +41,7 @@ function Home(props) {
       
       
        
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
+  
       
       <Footer />
       </div>

@@ -1,7 +1,7 @@
 import React from "react";
 const footerStyle = {
     textAlign: "center",
-    backgroundColor: "lightblue",
+    backgroundColor: "white",
     borderTop: "3px solid yellow",
     textAlign: "center",
     padding: "15px",
@@ -24,7 +24,7 @@ function Footer() {
         </div>
         </div>
         <div class="col">
-          <a href="https://github.com/christineit/Project-3">GITHUB</a>
+          <a  href="https://github.com/christineit/Project-3">GITHUB</a>
           </div>
       </div>
       </div>

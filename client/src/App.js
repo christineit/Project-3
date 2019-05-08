@@ -42,7 +42,7 @@ function App(props) {
               <Route exact path="/books/:id" component={Detail} />
               <Route component={NoMatch} /> */}
           </Switch>
-          <Particles
+          {/* <Particles
             params={{
               particles: {
                 number: {
@@ -95,7 +95,7 @@ function App(props) {
                 }
               }
             }}
-          />
+          /> */}
         </div>
       </Router>
     </div>
