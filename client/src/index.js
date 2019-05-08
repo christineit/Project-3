@@ -11,6 +11,7 @@ const client = Client.buildClient({
   domain: "graphql.myshopify.com"
 });
 
+
 ReactDOM.render(
   <FirebaseContext.Provider value={new Firebase()}>
     <App client={client} />,
