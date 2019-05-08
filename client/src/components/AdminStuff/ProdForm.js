@@ -2,7 +2,7 @@ import React from "react"
 import { Jumbotron, Container } from 'reactstrap';
 import CreateProductForm from './CreateProductForm';
 import API from "../../utils/API";
-
+import ProductPool from "./ProductPool"
 export default class ProductCreate extends React.Component {
 
 
@@ -15,8 +15,8 @@ export default class ProductCreate extends React.Component {
         price: 0,
         images: "",
         keywords: "",
-        isSelling: false
-
+        isSelling: false,
+        productList: []
     };
     // componentDidMount() {
     //     this.loadProduct(id);
@@ -37,9 +37,9 @@ export default class ProductCreate extends React.Component {
 
         // if (e.target.type === "number" && !re(value)) {
 
-            this.setState({
-                [yeet]: value
-            })
+        this.setState({
+            [yeet]: value
+        })
         // }
 
         if (e.target.type === "text" && !isNaN(value)) {
@@ -92,6 +92,7 @@ export default class ProductCreate extends React.Component {
                             handleInputChange={this.handleInputChange}
 
                         />
+                        <ProductPool />
                     </Container>
                 </Jumbotron>
             </div>
