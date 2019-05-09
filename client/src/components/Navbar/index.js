@@ -32,9 +32,9 @@ export default class NavBar extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div style={{ position: "fixed", width: "100%" }}>
         <Navbar color="light" light expand="md">
-          <NavbarBrand>1 Cart, 2 Cart, 3 Cart . . 4?.com</NavbarBrand>
+          <NavbarBrand>LikeHotCakes.com</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
