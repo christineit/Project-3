@@ -347,6 +347,7 @@ h2 {
 /* PRODUCTS
   * ============================== */
 .Product {
+  background: #DCDCDC
   flex: 0 1 31%;
   margin-left: 1%;
   margin-right: 1%;
