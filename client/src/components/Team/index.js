@@ -1,14 +1,15 @@
 import React from "react";
 const teamStyle = {
   textAlign: "center",
- 
-  opacity: "0.5",
-}
+  // opacity: "0.5",
+  position: "relative",
+  zIndex: 1
+};
 
 function Teaminfo() {
   return (
-    <div className="jumbotron jumbotron-fluid" style={teamStyle}>
-      <div className="container" >
+    <div className="jumbotron jumbotron-fluid aboutBox" style={teamStyle}>
+      <div className="container">
         <h1 className="display-4">The Team</h1>
         <p className="lead">Christine Trinh</p>
         <p className="lead">Peter Stone</p>
@@ -18,10 +19,7 @@ function Teaminfo() {
         <p className="lead">Irfan Patel</p>
       </div>
     </div>
-
-
-
-  )
+  );
 }
 
 export default Teaminfo;
