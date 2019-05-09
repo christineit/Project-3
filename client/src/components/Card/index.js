@@ -1,10 +1,14 @@
 import React from "react";
 const cardStyle = {
     textAlign: "center",
-    backgroundColor: "white",
+    // opacity: "0.5",
     padding: "15px",
     // height: "100px",
-    maximumWidth: "100%"
+    maximumWidth: "100%",
+    fontWeight: "bold",
+    boxShadow: "4px 4px 15px 3px #03100bf7",
+ background: "#2752ff",
+ color: "white",
   }
 
 
@@ -12,11 +16,12 @@ function Card() {
     return (
       <div className= "card" style={cardStyle}>
       <div className="card-body">
-        <h5 className="card-title">Product Name</h5>
-        <p className="card-text">Description</p>
-        <p className="card-text">Price</p>
-        <p className="card-text">Quantity</p>
-        <button style={{float: "center"}}>Add to Cart</button>
+        <h1 className="card-title"> "Here today, Gone Tomorrow" </h1>
+        
+       
+        {/* <p className="card-text">Price</p>
+        <p className="card-text">Quantity</p> */}
+        
       </div>
     </div>
     )
