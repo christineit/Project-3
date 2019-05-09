@@ -22,7 +22,7 @@ function About(props) {
         params={{
           particles: {
             number: {
-              value: 50
+              value: 700
             },
             size: {
               value: 3
