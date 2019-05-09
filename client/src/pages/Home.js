@@ -28,6 +28,10 @@ function Home(props) {
             <br />
             <br />
             {/* <Carousel style={{ padding: "50px" }} /> */}
+            <br />
+            <br />
+            <br />
+          <Card />
           </Col>
           <Col sm="12" md={{ size: 6, offset: 3 }}>
             {/* <Card style={{ padding: "50px" }} /> */}
