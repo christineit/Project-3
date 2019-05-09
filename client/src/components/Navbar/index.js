@@ -34,7 +34,7 @@ export default class NavBar extends React.Component {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand>LikeHotCakes.com</NavbarBrand>
+          <NavbarBrand>1 Cart, 2 Cart, 3 Cart . . 4?.com</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
@@ -43,16 +43,17 @@ export default class NavBar extends React.Component {
                   Home
                 </NavLink>
               </NavItem>
-              <NavItem>
+              {/* <NavItem>
                 <NavLink
                   tag={RRNavLink}
                   exact
                   to="/cart"
                   activeClassName="active"
-                  class="fas fa-shopping-cart"
-                />
-              </NavItem>
-              <NavItem>
+                >
+                  Cart
+                </NavLink>
+              </NavItem> */}
+              {/* <NavItem>
                 <NavLink
                   tag={RRNavLink}
                   exact
@@ -61,7 +62,7 @@ export default class NavBar extends React.Component {
                 >
                   Products
                 </NavLink>
-              </NavItem>
+              </NavItem> */}
               {/* <NavItem>
                 <NavLink
                   tag={RRNavLink}
@@ -82,7 +83,7 @@ export default class NavBar extends React.Component {
                   About
                 </NavLink>
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
+              {/* <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   Project
                 </DropdownToggle>
@@ -98,7 +99,7 @@ export default class NavBar extends React.Component {
                     </NavLink>
                   </DropdownItem>
                 </DropdownMenu>
-              </UncontrolledDropdown>
+              </UncontrolledDropdown> */}
             </Nav>
           </Collapse>
         </Navbar>

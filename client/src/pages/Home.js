@@ -40,7 +40,7 @@ function Home(props) {
       </Container>
 
       {/* <CustomCart /> */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
   // }
