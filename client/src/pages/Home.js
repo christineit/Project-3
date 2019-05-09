@@ -24,13 +24,12 @@ function Home(props) {
       <Container>
         <Row>
           <Col sm="12" md={{ size: 6, offset: 3 }}>
-            <br></br>
-            <br></br>
-            <br></br>
+            <br />
+            <br />
+            <br />
             <Carousel style={{ padding: "50px" }} />
           </Col>
           <Col sm="12" md={{ size: 6, offset: 3 }}>
-
             <Card style={{ padding: "50px" }} />
           </Col>
 
@@ -38,13 +37,10 @@ function Home(props) {
         </Row>
         {/* <ProductYeet client={props.client} /> */}
         <Shop client={props.client} />
-
       </Container>
 
-
-
       {/* <CustomCart /> */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
   // }
