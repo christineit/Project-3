@@ -101,22 +101,26 @@ class Shop extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App__header">
-          {!this.state.isCartOpen && (
-            <div className="App__view-cart-wrapper">
-              <button
-                className="App__view-cart"
-                onClick={() => this.setState({ isCartOpen: true })}
-              >
-                Cart
-              </button>
-            </div>
-          )}
-          <div className="App__title">
-            <h1>{this.state.shop.name}: React Example</h1>
-            <h2>{this.state.shop.description}</h2>
+        {/* <header className="App__header"> */}
+        {!this.state.isCartOpen && (
+          <div className="App__view-cart-wrapper">
+            <button
+              style={{
+                position: "fixed",
+                top: "17px",
+                color: "black",
+                right: "120px"
+              }}
+              className="App__view-cart fas fa-shopping-cart"
+              onClick={() => this.setState({ isCartOpen: true })}
+            />
           </div>
-        </header>
+        )}
+        {/* <div className="App__title">
+          <h1>{this.state.shop.name}: Who want a boot?</h1>
+          <h2>{this.state.shop.description}</h2>
+        </div> */}
+        {/* </header> */}
         <Products
           products={this.state.products}
           client={this.props.client}
