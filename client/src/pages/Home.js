@@ -38,7 +38,6 @@ function Home(props) {
         {/* <ProductYeet client={props.client} /> */}
         <Shop client={props.client} />
       </Container>
-
       {/* <CustomCart /> */}
       {/* <Footer /> */}
     </div>
