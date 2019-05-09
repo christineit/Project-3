@@ -32,7 +32,7 @@ class Shop extends Component {
       console.log("single products", res[0]);
 
       var clone = Object.assign({}, res[0]);
-      clone.title = "TOM PRODUCT!!!!!!!";
+      clone.title = "Boot";
 
       arr.push(clone);
 

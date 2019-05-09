@@ -38,7 +38,7 @@ export default class AdminLogin extends React.Component {
       <div>
         {this.state.adminHere ? (
           <div>
-            {/* <ProdForm /> */}
+            <ProdForm />
 
           </div>
         ) : (
@@ -67,8 +67,6 @@ export default class AdminLogin extends React.Component {
             </Form>
               <button onClick={this.onSubmit}>Login!</button></div>
           )}
-        <ProdForm />
-
       </div>
     );
   }
