@@ -1,5 +1,5 @@
 const express = require("express");
-// require("dotenv").config();
+require("dotenv").config();
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
@@ -35,9 +35,9 @@ app.use(routes);
 //Define local MongoDB URI
 var databaseURL = "mongodb://localhost/productlist";
 //---------------------------------------------------
-if (process.env.MONGODB_URI) {
+if (process.env.MONGOLAB_BROWN_URI) {
   //this executes if this is being executed in heroku app:
-  mongoose.connect(process.env.MONGODB_URI);
+  mongoose.connect(process.env.MONGOLAB_BROWN_URI);
 } else {
   //this executes if this is being executed on your local machine
   mongoose.connect(databaseURL);
